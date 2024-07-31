@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <el-select>
+  <div>
+    <el-select v-model="value" :teleported="false">
       <el-option
         v-for="value in ['1', '2', '3']"
         :key="value"
@@ -8,7 +8,11 @@
         :value="value"
       ></el-option>
     </el-select>
-  </section>
+  </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+const value = ref('')
+</script>
 <style></style>
